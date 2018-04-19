@@ -4,6 +4,8 @@ class Shipper < ApplicationRecord
   # before_action :authenticate_shipper!
   # protect_from_forgery prepend: true
 
+  has_many :boats
+  has_many :jobs
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
