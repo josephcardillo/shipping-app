@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'boats/new'
+  get 'boats/create'
+  get 'boats/show'
+  get 'boats/destroy'
+  get 'boats/edit'
+  get 'jobs/new'
+  get 'jobs/create'
+  get 'jobs/show'
   # devise_for :shippers
 
   devise_for :shippers, controllers: {
