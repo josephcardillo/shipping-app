@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # get 'shippers/show'
+  # get 'shippers/index'
+  # get 'shippers/edit'
+  # get 'shippers/create'
+  # get 'shippers/destroy'
   # get 'boats/new'
   # get 'boats/create'
   # get 'boats/show'
@@ -15,10 +20,14 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "jobs#index"
+  
+  get '/profile/:id' => 'shippers#show'
 
   # resources :shippers do
     resources :boats do
       resources :jobs
     # end
   end
+
+
 end
