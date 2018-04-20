@@ -10,7 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_19_164135) do
+ActiveRecord::Schema.define(version: 2018_04_20_143957) do
+
+  create_table "boats", force: :cascade do |t|
+    t.string "name"
+    t.integer "container_volume"
+    t.string "location"
+    t.integer "shipper_id"
+    t.integer "job_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["job_id"], name: "index_boats_on_job_id"
+    t.index ["shipper_id"], name: "index_boats_on_shipper_id"
+  end
+
+  create_table "boats_jobs", id: false, force: :cascade do |t|
+    t.integer "boat_id", null: false
+    t.integer "job_id", null: false
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.string "origin"
+    t.string "destination"
+    t.integer "cost"
+    t.integer "containers_needed"
+    t.integer "shipper_id"
+    t.integer "boat_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["boat_id"], name: "index_jobs_on_boat_id"
+    t.index ["shipper_id"], name: "index_jobs_on_shipper_id"
+  end
 
   create_table "shippers", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -25,6 +57,7 @@ ActiveRecord::Schema.define(version: 2018_04_19_164135) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar"
     t.index ["email"], name: "index_shippers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_shippers_on_reset_password_token", unique: true
   end
