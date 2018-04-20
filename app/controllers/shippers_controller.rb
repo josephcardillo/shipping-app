@@ -1,9 +1,11 @@
 class ShippersController < ApplicationController
   def show
     @shipper = Shipper.find(params[:id])
+    @boats = Boat.all
   end
 
   def index
+    @boats = Boat.all
   end
 
   def edit
@@ -11,6 +13,13 @@ class ShippersController < ApplicationController
 
   def create
     @shipper = Shipper.find(params[:id])
+
+  end
+
+  def dashboard
+    @boats = Boat.all
+    @shipper = Shipper.find(params[:id])
+
   end
 
   def destroy

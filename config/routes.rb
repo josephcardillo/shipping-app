@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   get '/profile/:id' => 'shippers#show'
 
-  get 'shippers/:id/dashboard' => 'shippers#create'
+  get 'shippers/:id/dashboard' => 'shippers#dashboard'
 
   # resources :shippers do
     resources :boats do
