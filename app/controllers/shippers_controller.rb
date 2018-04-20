@@ -18,6 +18,7 @@ class ShippersController < ApplicationController
 
   def dashboard
     @boats = Boat.all
+    @jobs = Job.all
     @shipper = Shipper.find(params[:id])
 
   end

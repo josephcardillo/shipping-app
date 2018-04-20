@@ -1,7 +1,15 @@
 <h1>Shippers#dashboard</h1>
 <p>Find me in app/views/shippers/dashboard.html.erb</p>
 
-<%= @shipper.email %><br>
+<%= @shipper.email %>
 <% @boats.each do |boat| %>
-  <%= boat.name %>
+  <p>Boat name: <%= boat.name %></p>
+  <p>Container volume: <%= boat.container_volume %></p>
+  <hr>
+<% end %>
+
+<% @jobs.each do |job| %>
+  <p>Job title: <%= job.title %></p>
+  <p>Job description: <%= job.description %></p>
+  <hr>
 <% end %>
