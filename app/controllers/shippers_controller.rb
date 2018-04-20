@@ -10,6 +10,7 @@ class ShippersController < ApplicationController
   end
 
   def create
+    @shipper = Shipper.find(params[:id])
   end
 
   def destroy
