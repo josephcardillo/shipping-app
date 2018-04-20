@@ -17,7 +17,7 @@ class BoatsController < ApplicationController
     puts params.inspect
     puts '***************'
     @boat = Boat.new(boat_params)
-    get_shipper_id
+    get_boat_shipper_id
     @boat.save
     p @boat.errors.full_messages
   end
