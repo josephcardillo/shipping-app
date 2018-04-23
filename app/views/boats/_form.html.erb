@@ -3,6 +3,9 @@
     <%= f.text_field :name %>
     <%= f.label :location %>
     <%= f.text_field :location %>
+
+    <%= f.select :location, ['Philadelphia', 'New York', 'Shanghai', 'Hong Kong', 'Hamburg', 'Los Angeles', 'Ho Chi Minh']%>
+
     <%= f.label :container_volume %>
     <%= f.text_field :container_volume %>
     <%= f.submit %>

@@ -26,10 +26,10 @@ Rails.application.routes.draw do
   get 'shippers/:id/dashboard' => 'shippers#dashboard'
 
   # resources :shippers do
-    resources :boats do
-      resources :jobs
+  resources :boats
+  resources :jobs
     # end
-  end
+
 
 
 end
