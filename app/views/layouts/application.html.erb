@@ -7,7 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
+
 
     <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -20,7 +20,21 @@
       <p class="alert"><%= alert %></p>
     <%= yield %>
 
-
+    <script>
+      $(document).ready(function(){
+      $('#boat-toggle').change(function() {
+        if(this.options[this.selectedIndex].text == "The Bee") {
+          $('.boat-show').val('');
+          $('.boat-show').show();
+        } else {
+          $('.boat-show').val(this.innerText);
+          $('.boat-show').hide();
+        }
+        console.dir(this);
+        console.log(this.options[this.selectedIndex].text);
+      });
+    });
+    </script>
 
   </body>
 </html>

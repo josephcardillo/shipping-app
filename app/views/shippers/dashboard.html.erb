@@ -10,13 +10,13 @@
 
 
 <%= collection_select( :job, :id, Job.all, :id, :title, {}, { :multiple => false } ) %>
-<hr>
-<%= collection_select( :boat, :id, Boat.all, :id, :name, {}, { :multiple => false } ) %>
-<hr>
 
-<%= select_tag "categories", options_from_collection_for_select(Job.all, "id", "title") %>
 <hr>
+<div>
+  <%= collection_select( :boat, :id, Boat.all, :id, :name, {}, { :multiple => false, id:"boat-toggle" } ) %>
+</div>
 
+<hr>
 
 <% @jobs.each do |job| %>
   <%= select(:title, :id, [job.title]) %>
