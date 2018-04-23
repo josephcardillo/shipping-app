@@ -27,9 +27,9 @@ boat_list.each do |name, container_volume, location, shipper_id|
 end
 
 job_list = [
-  ["Bread", "Take bread to L.A.", "Philadelphia", "Los Angeles", "$1000", "50", 1],
-  ["Perfume", "Take Perfume to Beijing", "Los Angeles", "Beijing", "$2000", "60", 2],
-  ["Hats", "Take hats to Philadelphia", "New York", "Philadelphia", "$3000", "70", 3]
+  ["Bread", "Take bread to L.A.", "Philadelphia", "Los Angeles", "1000", "50", 1],
+  ["Perfume", "Take Perfume to Beijing", "Los Angeles", "Beijing", "2000", "60", 2],
+  ["Hats", "Take hats to Philadelphia", "New York", "Philadelphia", "3000", "70", 3]
 ]
 
 job_list.each do |title, description, origin, destination, cost, containers_needed, shipper_id|
