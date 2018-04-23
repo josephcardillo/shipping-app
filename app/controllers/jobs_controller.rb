@@ -23,7 +23,17 @@ class JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
+
   end
+
+  def update
+    @job = Job.find(params[:id])
+    @job.update(job_params)
+
+    # flash.notice = "Your post titled '#{@post.title}' has been updated!"
+    redirect_to job_path(@job)
+  end
+
 
   def destroy
   end
@@ -33,5 +43,4 @@ class JobsController < ApplicationController
   def job_params
       params.require(:job).permit(:id, :title, :description, :origin, :destination, :cost, :containers_needed, :shipper_id, :boat_id)
   end
-
 end
