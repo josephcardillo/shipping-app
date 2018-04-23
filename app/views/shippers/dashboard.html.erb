@@ -10,7 +10,8 @@
 
 
 <%= collection_select( :job, :id, Job.all, :id, :title, {}, { :multiple => false } ) %>
-
+<hr>
+<%= collection_select( :boat, :id, Boat.all, :id, :name, {}, { :multiple => false } ) %>
 <hr>
 
 <% @jobs.each do |job| %>
