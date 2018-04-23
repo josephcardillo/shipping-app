@@ -1,4 +1,9 @@
 <h1>Boats#show</h1>
 <p>Find me in app/views/boats/show.html.erb</p>
 
+
+<p>Title: <%= @boat.name %></p>
+<p>Location: <%= @boat.location %></p>
+<% if @boat.avatar.url %>
 <%= image_tag @boat.avatar.url %>
+<% end %>
