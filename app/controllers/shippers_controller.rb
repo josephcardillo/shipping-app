@@ -9,6 +9,7 @@ class ShippersController < ApplicationController
   end
 
   def edit
+
   end
 
   def create
@@ -19,6 +20,7 @@ class ShippersController < ApplicationController
   def dashboard
     @boats = Boat.all
     @jobs = Job.all
+    @job = @jobs.find(params[:id])
     @shipper = Shipper.find(params[:id])
 
   end

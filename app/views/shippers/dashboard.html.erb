@@ -8,7 +8,13 @@
   <hr>
 <% end %>
 
+
+<%= collection_select( :job, :id, Job.all, :id, :title, {}, { :multiple => false } ) %>
+
+<hr>
+
 <% @jobs.each do |job| %>
+  <%= select(:title, :id, [job.title]) %>
   <p>Job title: <%= job.title %></p>
   <p>Job description: <%= job.description %></p>
   <hr>
