@@ -23,13 +23,14 @@ class BoatsController < ApplicationController
   end
 
   def show
-    # @boat = Boat.find(params[:id])
+    @boat = Boat.find(params[:id])
   end
 
   def destroy
   end
 
   def edit
+    @boat = Boat.find(params[:id])
   end
 
   private
