@@ -7,3 +7,5 @@
 <% if @boat.avatar.url %>
 <%= image_tag @boat.avatar.url %>
 <% end %>
+
+<%= link_to "Delete Boat", boat_path(@boat), method: :delete %>

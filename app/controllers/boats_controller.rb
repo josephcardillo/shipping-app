@@ -18,7 +18,12 @@ class BoatsController < ApplicationController
     puts '***************'
     @boat = Boat.new(boat_params)
     get_boat_shipper_id
-    @boat.save
+    @boat.name.downcase
+    if @boat.save
+    flash.notice = "Your boat '#{@boat.name}' has been created!"
+    else
+    flash.notice = "Your boat name has been taken!"
+    end
     p @boat.errors.full_messages
   end
 
@@ -29,11 +34,20 @@ class BoatsController < ApplicationController
 def update
   @boat = Boat.find(params[:id])
   @boat.update(boat_params)
+  @boat.name.downcase.save
   redirect_to boat_path(@boat)
 end
 
-  def destroy
+def destroy
+  p params
+  boat = Boat.find(params[:id])
+  if boat.destroy
+    redirect_to new_boat_path
+  else
+    p job.errors.full_messages
+    redirect_to show_path(boat)
   end
+end
 
   def edit
     @boat = Boat.find(params[:id])
@@ -44,5 +58,4 @@ end
   def boat_params
       params.require(:boat).permit(:id, :name, :container_volume, :location, :shipper_id, :job_id, :created_at, :updated_at)
   end
-
 end

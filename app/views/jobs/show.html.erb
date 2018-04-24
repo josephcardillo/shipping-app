@@ -6,3 +6,9 @@
 <p>Origin: <%= @job.origin %></p>
 <p>Destination: <%= @job.destination %></p>
 <p>Containers Needed: <%= @job.containers_needed %></p>
+
+<!-- <form method="delete" action="/jobs/<%=@job.id%>">
+  <input value="delete" type="submit">
+</form> -->
+
+<%= link_to "Delete Job", job_path(@job), method: :delete %>
