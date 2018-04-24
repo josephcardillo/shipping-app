@@ -14,8 +14,12 @@ class JobsController < ApplicationController
     puts '***************'
     @job = Job.new(job_params)
     get_job_shipper_id
-    # get_boat_id
-    @job.save
+    @job.title.downcase
+    if @job.save
+    flash.notice = "Your job '#{@job.title}' has been created!"
+  else
+    flash.notice = "Your job title has been taken! Please enter a new title."
+  end
     p @job.errors.full_messages
   end
 
@@ -43,7 +47,7 @@ class JobsController < ApplicationController
       redirect_to new_job_path
     else
       p job.errors.full_messages
-      redirect_to show_path(job)      
+      redirect_to show_path(job)
     end
   end
 
