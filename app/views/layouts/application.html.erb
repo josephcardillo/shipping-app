@@ -20,7 +20,21 @@
       <p class="alert"><%= alert %></p>
     <%= yield %>
 
-
+    <script>
+      $(document).ready(function(){
+      $('#boat-toggle').change(function() {
+        if(this.options[this.selectedIndex].text == "The Bee") {
+          $('.boat-show').val('');
+          $('.boat-show').show();
+        } else {
+          $('.boat-show').val(this.innerText);
+          $('.boat-show').hide();
+        }
+        console.dir(this);
+        console.log(this.options[this.selectedIndex].text);
+      });
+    });
+    </script>
 
   </body>
 </html>

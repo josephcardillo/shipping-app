@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include ShippersHelper
+  include BoatsHelper
   # Insert before action here configure permitted parameters
   before_action :configure_permitted_parameters, if: :devise_controller?
 

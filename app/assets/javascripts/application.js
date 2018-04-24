@@ -16,3 +16,5 @@
 //= require_tree .
 
 //= require materialize
+//= require jquery
+//= jquery_ujs
