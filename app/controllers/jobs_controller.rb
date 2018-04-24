@@ -6,6 +6,8 @@ class JobsController < ApplicationController
     @job = Job.create
   end
 
+
+
   def create
     puts '***************'
     puts params.inspect
