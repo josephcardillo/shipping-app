@@ -32,8 +32,16 @@ def update
   redirect_to boat_path(@boat)
 end
 
-  def destroy
+def destroy
+  p params
+  boat = Boat.find(params[:id])
+  if boat.destroy
+    redirect_to new_boat_path
+  else
+    p job.errors.full_messages
+    redirect_to show_path(boat)
   end
+end
 
   def edit
     @boat = Boat.find(params[:id])
