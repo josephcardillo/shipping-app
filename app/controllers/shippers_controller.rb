@@ -17,15 +17,30 @@ class ShippersController < ApplicationController
 
   end
 
+  def joincreate
+    @boat_job = BoatJob.create(boat_jobs_params)
+  end
+
+  def joinshow
+    @boat_job = BoatJob.find(params[:id])
+  end
+
   def dashboard
     @boats = Boat.all
     @boat = @boats.find(params[:id])
     @jobs = Job.all
-    @job = @jobs.find(params[:id])
+    @job = Job.new
     @shipper = Shipper.find(params[:id])
 
   end
 
   def destroy
   end
+
+  private
+
+  def boat_jobs_params
+      params.require(:boat_job).permit(:boat_id, :job_id)
+  end
+
 end
