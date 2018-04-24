@@ -1,25 +1,25 @@
 <h1>Shippers#dashboard</h1>
 <p>Find me in app/views/shippers/dashboard.html.erb</p>
 
-<%= @shipper.email %>
+<h1><%= @shipper.email %></h1>
+
+<%= form_for BoatJob.new, url: join_create_path do |f| %>
+  <%= f.label :boat_name %>
+  <%= select("boat_job", "boat_id", boats_select_array ) %>
+  <%= f.label :job_name %>
+  <%= select("boat_job", "job_id", jobs_select_array ) %>
+<%= f.submit %>
+<% end %>
+<hr>
+
+
 <% @boats.each do |boat| %>
   <p>Boat name: <%= boat.name %></p>
   <p>Container volume: <%= boat.container_volume %></p>
   <hr>
 <% end %>
 
-
-<%= collection_select( :job, :id, Job.all, :id, :title, {}, { :multiple => false } ) %>
-
-<hr>
-<div>
-  <%= collection_select( :boat, :id, Boat.all, :id, :name, {}, { :multiple => false, id:"boat-toggle" } ) %>
-</div>
-
-<hr>
-
 <% @jobs.each do |job| %>
-  <%= select(:title, :id, [job.title]) %>
   <p>Job title: <%= job.title %></p>
   <p>Job description: <%= job.description %></p>
   <hr>

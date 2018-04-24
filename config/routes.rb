@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'boats_jobs/new'
+  get 'boats_jobs/create'
+  get 'boats_jobs/edit'
+  get 'boats_jobs/destroy'
+  get 'boats_jobs/show'
+  get 'boats_jobs/update'
   # get 'shippers/show'
   # get 'shippers/index'
   # get 'shippers/edit'
@@ -22,6 +28,9 @@ Rails.application.routes.draw do
   root to: "jobs#index"
 
   get '/profile/:id' => 'shippers#show'
+
+  get '/join/create', to: 'shippers#joinshow', as: 'join_show'
+  post '/join/create', to: 'shippers#joincreate', as: 'join_create'
 
   get 'shippers/:id/dashboard' => 'shippers#dashboard'
 
