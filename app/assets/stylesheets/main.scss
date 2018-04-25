@@ -1,5 +1,9 @@
-.boat-show {
-  // display: none;
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Crimson Text', serif;
+
+.column {
+  float: left;
+  // width: 50%;
 }
 
 body{
@@ -62,15 +66,20 @@ h1{
 #boat-job-inner {
   // display: none;
 }
+  
+.boat-job-div1 {
+  width: 36%;
+  padding: 24px;
+}
 
-.column {
-    float: left;
-    width: 50%;
+.boat-job-div2 {
+  width: 36%;
+  padding: 24px;
 }
 
 /* Clear floats after the columns */
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
