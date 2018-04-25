@@ -6,6 +6,67 @@
   // width: 50%;
 }
 
+body{
+  margin: 0;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+  font-family: Georgia, serif;
+  padding-top: 10px;
+}
+
+a:link{
+  text-decoration: none;
+}
+
+div.image{
+  background-image: url("one_ship.jpg");
+  // background-position: center center;
+  background-size: cover;
+  height: 600px;
+}
+
+.field{
+  font-size: 18px;
+  font-family: Georgia, serif;
+}
+
+.sign-up{
+  margin: auto;
+  text-align: center;
+  border: 2px;
+  border-style: solid;
+  color: white;
+  width: 300px;
+}
+
+#p1{
+  font-family: Georgia, serif;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  margin-top: -25px;
+  margin-left: 100px;
+}
+
+h3{
+  padding-top: -10px;
+}
+h1{
+  padding-top: 10px;
+  text-align: center;
+  font-size: 45px;
+  font-family: Georgia, serif;
+  color: white;
+
+#boat-job-inner {
+  // display: none;
+}
+  
 .boat-job-div1 {
   width: 36%;
   padding: 24px;
