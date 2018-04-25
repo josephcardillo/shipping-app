@@ -6,8 +6,6 @@ class JobsController < ApplicationController
     @job = Job.create
   end
 
-
-
   def create
     puts '***************'
     puts params.inspect
@@ -38,7 +36,6 @@ class JobsController < ApplicationController
     # flash.notice = "Your post titled '#{@post.title}' has been updated!"
     redirect_to job_path(@job)
   end
-
 
   def destroy
     p params

@@ -26,8 +26,9 @@
         <% end %>
       </div>
     </header>
-        <%= link_to 'Sign Out', destroy_shipper_session_path, method: :delete %>
-
+    <% if current_shipper %>
+      <%= link_to 'Sign Out', destroy_shipper_session_path, method: :delete %>
+    <%end%>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     <%= yield %>
