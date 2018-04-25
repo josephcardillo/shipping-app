@@ -30,7 +30,10 @@ Rails.application.routes.draw do
   get '/profile/:id' => 'shippers#show'
 
   get '/join/create', to: 'shippers#joinshow', as: 'join_show'
-  post '/join/create', to: 'shippers#joincreate', as: 'join_create'
+
+  # post '/join/create', to: 'shippers#joincreate', as: 'join_create'
+
+  post 'shippers/:id/dashboard', to: 'shippers#joincreate', as: 'join_create'
 
   get 'shippers/:id/dashboard', to: 'shippers#dashboard', as: 'shipper_dash'
 

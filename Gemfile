@@ -5,7 +5,7 @@ ruby '2.4.1'
 gem 'devise'
 gem 'materialize-sass'
 gem 'carrierwave', '~> 1.0'
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'

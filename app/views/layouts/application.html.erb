@@ -26,6 +26,7 @@
         <% end %>
       </div>
     </header>
+
         <%= link_to 'Sign Out', destroy_shipper_session_path, method: :delete %>
 
       <p class="notice"><%= notice %></p>
@@ -33,6 +34,9 @@
     <%= yield %>
 
     <script>
+
+
+
       $(document).ready(function(){
       $('#boat-toggle').change(function() {
         if(this.options[this.selectedIndex].text == "The Bee") {

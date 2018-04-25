@@ -17,4 +17,3 @@
 
 //= require materialize
 //= require jquery
-//= jquery_ujs

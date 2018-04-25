@@ -2,14 +2,30 @@
 <p>Find me in app/views/shippers/dashboard.html.erb</p>
 
 <h1><%= @shipper.email %></h1>
+<div>
+  <%= form_with model: BoatJob.new, url: join_create_path do |f| %>
+    <%= f.label :boat_name %>
+    <%= select("boat_job", "boat_id", boats_select_array ) %>
+    <%= f.label :job_name %>
+    <%= select("boat_job", "job_id", jobs_select_array ) %>
+  <%= f.submit class: "boat-job-button", data: {disable_with: "Submitting..."} %>
+  <% end %>
+</div>
 
-<%= form_for BoatJob.new, url: join_create_path do |f| %>
-  <%= f.label :boat_name %>
-  <%= select("boat_job", "boat_id", boats_select_array ) %>
-  <%= f.label :job_name %>
-  <%= select("boat_job", "job_id", jobs_select_array ) %>
-<%= f.submit %>
-<% end %>
+<h1>BoatJob Connection</h1>
+
+<div class="boat-job-div">
+    <!-- <div id="boat-job-inner"> -->
+  <h2>
+    <span id='boat-id-span'><%= @boat_job.boat_id %></span>
+  </h2>
+
+  <h2>
+    <span id='job-id-span'><%= @boat_job.job_id %></span>
+  </h2>
+    <!-- </div> -->
+</div>
+
 <hr>
 
 

@@ -19,7 +19,12 @@ class ShippersController < ApplicationController
 
   def joincreate
     @boat_job = BoatJob.create(boat_jobs_params)
-  end
+    # redirect_to shipper_dash_path
+     respond_to do |format|
+       format.js
+     end
+   end
+
 
   def joinshow
     @boat_job = BoatJob.find(params[:id])
@@ -31,7 +36,7 @@ class ShippersController < ApplicationController
     @jobs = Job.all
     @job = Job.new
     @shipper = Shipper.find(params[:id])
-
+    @boat_job = BoatJob.last
   end
 
   def destroy
