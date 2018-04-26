@@ -1,4 +1,8 @@
+<h1>ShipEx</h1>
+<p id="p1">-We ship shit for less</p>
 <%= form_for @job do |f| %>
+
+<div class = "boats-new">
   <div>
     <%= f.label :title, "Title: " %>
     <%= f.text_field :title %>
@@ -25,3 +29,5 @@
   </div>
     <%= f.submit %>
   <% end %>
+
+</div>
