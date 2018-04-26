@@ -47,10 +47,11 @@ end
 def destroy
   p params
   boat = Boat.find(params[:id])
+  p boat
   if boat.destroy
     redirect_to new_boat_path
   else
-    p job.errors.full_messages
+    p boat.errors.full_messages
     redirect_to show_path(boat)
   end
 end

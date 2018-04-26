@@ -32,7 +32,6 @@ class ShippersController < ApplicationController
 
   def dashboard
     @boats = Boat.all
-    @boat = @boats.find(params[:id])
     @jobs = Job.all
     @job = Job.new
     @shipper = Shipper.find(params[:id])
