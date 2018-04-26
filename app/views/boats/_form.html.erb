@@ -1,32 +1,24 @@
 <h1>ShipEx</h1>
 <p id="p1">-We ship shit for less</p>
 
-<div class = "boats-new">
-<%= form_for @boat do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %><br>
-    <%= f.label :location %>
-<<<<<<< HEAD
-    <%= f.text_field :location %>
-
-    <%= f.select :location, ['Philadelphia', 'New York', 'Shanghai', 'Hong Kong', 'Hamburg', 'Los Angeles', 'Ho Chi Minh']%>
-
-    <br><%= f.label :container_volume %>
-=======
-    <%= f.select :location, boats_location%>
-    <%= f.label :container_volume %>
->>>>>>> caa83019995a882ebbc62c2c279daccc5f0acdd6
-    <%= f.text_field :container_volume %>
-    <div class="field">
-      <%= f.label :avatar %><br />
-      <%= f.file_field :avatar %>
-    </div>
-    <br>
-    <%= f.submit %>
-  <% end %>
-
-</div>
-
+  <div class = "boats-new">
+    <h2>Create Boat</h2>
+    <%= form_for @boat do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %><br>
+      <%= f.label :location %>
+      <%= f.select :location, boats_location%>
+      <br>
+      <%= f.label :container_volume %>
+      <%= f.text_field :container_volume %>
+      <div class="field">
+        <%= f.label :avatar %><br />
+        <%= f.file_field :avatar %>
+      </div>
+      <br>
+      <%= f.submit %>
+    <% end %>
+  </div>
 
 
 

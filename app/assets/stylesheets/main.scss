@@ -108,7 +108,16 @@ label{
 
 .boats-new{
   padding-left: 20px;
+  padding-bottom: 10px;
+  border: solid;
+  width: 400px;
+  color: white;
 }
+
+.boats-new{
+  margin: auto;
+}
+
 
 h3{
  color:white;
@@ -118,4 +127,12 @@ h3{
 img.boat-image {
   width: 300px;
   height: auto;
+}
+
+h2{
+  padding-left: 50px;
+}
+
+.dash-board1{
+  padding-left: 10px;
 }
