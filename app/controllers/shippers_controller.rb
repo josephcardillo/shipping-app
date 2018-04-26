@@ -31,12 +31,11 @@ class ShippersController < ApplicationController
   end
 
   def dashboard
-      @boats = Boat.all
-    # @boat = @boats.find(params[:id])
-      @jobs = Job.all
-      @job = Job.new
-      @shipper = Shipper.find(params[:id])
-      @boat_job = BoatJob.last
+    @boats = Boat.all
+    @jobs = Job.all
+    @job = Job.new
+    @shipper = Shipper.find(params[:id])
+    @boat_job = BoatJob.last
   end
 
   def destroy
