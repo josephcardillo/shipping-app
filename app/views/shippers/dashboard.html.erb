@@ -1,7 +1,9 @@
 <h1>ShipEx</h1>
 <p id="p1">-We ship shit for less</p>
-<h3>Welcome Back <%= @shipper.email %></h3>
+<h3>Welcome Back <%= @shipper.email %>!</h3>
 
+<h1>Connect your jobs and boats!</h1>
+<h2>Choose a boat and job from the below dropdown, then click "Create Boat Job" to assign.</h2>
 <div class = "dash-board1">
   <%= form_with model: BoatJob.new, url: join_create_path do |f| %>
     <%= f.label :boat_name %>
@@ -14,7 +16,6 @@
   <% end %>
 </div>
 
-<h1>BoatJob Connection</h1>
 <div class="">
   <div class="row">
     <div class="column boat-job-div1">
