@@ -1,4 +1,9 @@
 class BoatsController < ApplicationController
+
+  def index
+    @boats = Boat.all.reverse
+  end
+
   def new
     puts '***************'
     puts params.inspect
@@ -34,7 +39,8 @@ class BoatsController < ApplicationController
 def update
   @boat = Boat.find(params[:id])
   @boat.update(boat_params)
-  @boat.name.downcase.save
+  @boat.name.downcase
+  @boat.save
   redirect_to boat_path(@boat)
 end
 
@@ -56,6 +62,6 @@ end
   private
 
   def boat_params
-      params.require(:boat).permit(:id, :name, :container_volume, :location, :shipper_id, :job_id, :created_at, :updated_at)
+      params.require(:boat).permit(:id, :name, :container_volume, :location, :shipper_id, :job_id, :created_at, :updated_at, :avatar)
   end
 end

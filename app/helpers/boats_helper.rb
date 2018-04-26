@@ -13,4 +13,12 @@ module BoatsHelper
     end
     return arr
   end
+
+
+    def boats_location
+      arr = ['Philadelphia', 'New York', 'Shanghai', 'Hong Kong', 'Hamburg', 'Los Angeles', 'Ho Chi Minh']
+      return arr
+    end
+
+
 end

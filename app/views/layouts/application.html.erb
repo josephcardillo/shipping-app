@@ -21,7 +21,9 @@
           <ul>
             <li><%=link_to("Dashboard", shipper_dash_path(current_shipper), class: "nav-item nav-link") %></li>
             <li><%=link_to("Create Job", new_job_path, class: "nav-item nav-link") %></li>
+            <li><%=link_to("View Jobs", jobs_path, class: "nav-item nav-link") %></li>
             <li><%=link_to("Create Boat", new_boat_path, class: "nav-item nav-link") %></li>
+            <li><%=link_to("View Boats", boats_path, class: "nav-item nav-link") %></li>
             <li><%= link_to 'Sign Out', destroy_shipper_session_path, method: :delete %></li>
           </ul>
         <% end %>

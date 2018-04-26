@@ -13,11 +13,11 @@
   </div>
   <div>
     <%= f.label :origin, "Origin: " %>
-    <%= f.text_field :origin %>
+    <%= f.select :origin, boats_location%>
   </div>
   <div>
     <%= f.label :destination, "Destination: " %>
-    <%= f.text_field :destination %>
+    <%= f.select :destination, boats_location%>
 </div>
   <div>
     <%= f.label :cost, "Cost: " %>
