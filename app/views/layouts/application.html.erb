@@ -16,7 +16,7 @@
   <body>
 
     <header>
-      <div class="navbar">
+      <div>
         <% if current_shipper %>
           <ul>
             <li><%=link_to("Dashboard", shipper_dash_path(current_shipper), class: "nav-item nav-link") %></li>
@@ -29,7 +29,6 @@
         <% end %>
       </div>
     </header>
-
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     <%= yield %>

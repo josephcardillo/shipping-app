@@ -1,13 +1,15 @@
-<h1>Shippers#dashboard</h1>
-<p>Find me in app/views/shippers/dashboard.html.erb</p>
+<h1>ShipEx</h1>
+<p id="p1">-We ship shit for less</p>
+<h3>Welcome Back <%= @shipper.email %></h3>
 
-<h1><%= @shipper.email %></h1>
-<div>
+<div class = "dash-board1">
   <%= form_with model: BoatJob.new, url: join_create_path do |f| %>
     <%= f.label :boat_name %>
     <%= select("boat_job", "boat_id", boats_select_array ) %>
+    <br>
     <%= f.label :job_name %>
     <%= select("boat_job", "job_id", jobs_select_array ) %>
+    <br>
   <%= f.submit class: "boat-job-button", data: {disable_with: "Submitting..."} %>
   <% end %>
 </div>

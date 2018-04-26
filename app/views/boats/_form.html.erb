@@ -1,17 +1,24 @@
-<%= form_for @boat do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :location %>
-    <%= f.select :location, boats_location%>
-    <%= f.label :container_volume %>
-    <%= f.text_field :container_volume %>
-    <div class="field">
-      <%= f.label :avatar %><br />
-      <%= f.file_field :avatar %>
-    </div>
-    <%= f.submit %>
-  <% end %>
+<h1>ShipEx</h1>
+<p id="p1">-We ship shit for less</p>
 
+  <div class = "boats-new">
+    <h2>Create Boat</h2>
+    <%= form_for @boat do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %><br>
+      <%= f.label :location %>
+      <%= f.select :location, boats_location%>
+      <br>
+      <%= f.label :container_volume %>
+      <%= f.text_field :container_volume %>
+      <div class="field">
+        <%= f.label :avatar %><br />
+        <%= f.file_field :avatar %>
+      </div>
+      <br>
+      <%= f.submit %>
+    <% end %>
+  </div>
 
 
 

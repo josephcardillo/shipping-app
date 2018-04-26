@@ -28,7 +28,7 @@ div.image{
   background-image: url("one_ship.jpg");
   // background-position: center center;
   background-size: cover;
-  height: 600px;
+  height: 100vh;
 }
 
 .field{
@@ -81,13 +81,6 @@ label{
   font-size: 22px;
 }
 
-// input{
-//   width: 100%;
-//   padding: 10px;
-//   margin-left: 5%;
-//   margin-right: 5%;
-// }
-
 #boat-job-inner {
   // display: none;
 }
@@ -113,11 +106,33 @@ label{
   clear: both;
 }
 
-div.navbar {
-  background-image: url("cargo-ship.png");
+.boats-new{
+  padding-left: 20px;
+  padding-bottom: 10px;
+  border: solid;
+  width: 400px;
+  color: white;
+}
+
+.boats-new{
+  margin: auto;
+}
+
+
+h3{
+ color:white;
+ padding-left: 5px;
 }
 
 img.boat-image {
   width: 300px;
   height: auto;
+}
+
+h2{
+  padding-left: 50px;
+}
+
+.dash-board1{
+  padding-left: 10px;
 }
