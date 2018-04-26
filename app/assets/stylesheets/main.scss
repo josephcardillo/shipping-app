@@ -81,12 +81,12 @@ label{
   font-size: 22px;
 }
 
-input{
-  width: 100%;
-  padding: 10px;
-  margin-left: 5%;
-  margin-right: 5%;
-}
+// input{
+//   width: 100%;
+//   padding: 10px;
+//   margin-left: 5%;
+//   margin-right: 5%;
+// }
 
 #boat-job-inner {
   // display: none;
@@ -111,4 +111,8 @@ input{
   content: "";
   display: table;
   clear: both;
+}
+
+div.navbar {
+  background-image: url("cargo-ship.png");
 }
