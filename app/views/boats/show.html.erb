@@ -5,7 +5,7 @@
 <p>Title: <%= @boat.name %></p>
 <p>Location: <%= @boat.location %></p>
 <% if @boat.avatar.url %>
-<%= image_tag @boat.avatar.url %>
+<p>Boat Image: <%= image_tag @boat.avatar.url, class: "boat-image" %></p>
 <% end %>
 
 <%= link_to "Delete Boat", boat_path(@boat), method: :delete %>
