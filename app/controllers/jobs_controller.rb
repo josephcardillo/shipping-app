@@ -1,4 +1,9 @@
 class JobsController < ApplicationController
+
+  def index
+    @jobs = Job.all.reverse
+  end
+
   def new
     puts '***************'
     puts params.inspect

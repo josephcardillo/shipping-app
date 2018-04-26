@@ -1,4 +1,9 @@
 class BoatsController < ApplicationController
+
+  def index
+    @boats = Boat.all.reverse
+  end
+
   def new
     puts '***************'
     puts params.inspect
