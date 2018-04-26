@@ -16,4 +16,8 @@ class BoatsJobsController < ApplicationController
 
   def update
   end
+
+  def index
+    @boat_job = BoatJob.all.reverse
+  end
 end

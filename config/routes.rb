@@ -37,7 +37,7 @@ Rails.application.routes.draw do
 
   get 'shippers/:id/dashboard', to: 'shippers#dashboard', as: 'shipper_dash'
 
-
+  get '/boatjobs', to: 'boats_jobs#index', as: 'boat_jobs'
   # resources :shippers do
   resources :boats
   resources :jobs
