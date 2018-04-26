@@ -8,8 +8,10 @@ module BoatsHelper
 
   def boats_select_array
     arr = []
-    Boat.all.each do |a|
-      arr << [a.name, a.id]
+    Boat.all.each do |boat|
+      if boat.shipper_id == current_shipper.id
+      arr << [boat.name, boat.id]
+      end 
     end
     return arr
   end
