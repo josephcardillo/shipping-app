@@ -17,6 +17,7 @@
 </div>
 
 <div class="">
+  <h1>Last Assigned Job:</h1>
   <div class="row">
     <div class="column boat-job-div1">
         <% if BoatJob.exists? %>
@@ -51,22 +52,26 @@
   <div class="row">
     <div class="column boat-job-div2">
       <% @boats.each do |boat| %>
+      <% if boat.shipper_id == current_shipper.id %>
         <p>Boat name: <%= boat.name %></p>
         <p>Container volume: <%= boat.container_volume %></p>
         <p>Location: <%= boat.location %></p>
-        <hr>
+      <hr>
       <% end %>
+    <% end %>
     </div>
 
     <div class="column boat-job-div2">
       <% @jobs.each do |job| %>
-        <p>Job title: <%= job.title %></p>
-        <p>Job description: <%= job.description %></p>
-        <p>Origin: <%= job.origin %></p>
-        <p>Destination: <%= job.destination %></p>
-        <p>Cost: $<%= job.cost %></p>
-        <p>Containers Needed: <%= job.containers_needed %></p>
+      <% if job.shipper_id == current_shipper.id %>
+          <p>Job title: <%= job.title %></p>
+          <p>Job description: <%= job.description %></p>
+          <p>Origin: <%= job.origin %></p>
+          <p>Destination: <%= job.destination %></p>
+          <p>Cost: $<%= job.cost %></p>
+          <p>Containers Needed: <%= job.containers_needed %></p>
         <hr>
+        <% end %>
       <% end %>
     </div>
   </div>

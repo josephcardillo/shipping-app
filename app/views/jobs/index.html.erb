@@ -4,6 +4,7 @@
 <h2> All Jobs</h2>
 <div class="column boat-job-div2">
   <% @jobs.each do |job| %>
+  <% if job.shipper_id == current_shipper.id %>
     <p>Job title: <%= job.title %></p>
     <p>Job description: <%= job.description %></p>
     <p>Origin: <%= job.origin %></p>
@@ -11,5 +12,6 @@
     <p>Cost: $<%= job.cost %></p>
     <p>Containers Needed: <%= job.containers_needed %></p>
     <hr>
+    <% end %>
   <% end %>
 </div>
