@@ -1,11 +1,19 @@
 <h1>ShipEx</h1>
 <p id="p1">-We ship shit for less</p>
-<%= form_for @boat do |f| %>
+
+<div class="job-title">
+  <%= form_for @boat do |f| %>
+    <p>Edit your boat:</p>
     <%= f.label :name %>
     <%= f.text_field :name %>
+    <br>
     <%= f.label :location %>
     <%= f.text_field :location %>
+    <br>
     <%= f.label :avatar %><br />
     <%= f.file_field :avatar %>
+    <br>
+    <br>
     <%= f.submit %>
     <% end %>
+</div>
