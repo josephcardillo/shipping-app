@@ -1,155 +1,155 @@
-// font-family: 'Montserrat', sans-serif;
-// font-family: 'Crimson Text', serif;
-
-.column {
-  float: left;
-  // width: 50%;
-}
-
-body{
-  margin: 0;
-  background-color: #dadbe0;
-}
-
-ul{
-  list-style: none;
-  display: flex;
-  justify-content: space-evenly;
-  font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
-  padding-top: 10px;
-}
-
-li{
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-li a:hover {
-    background-color: #555;
-    color: white;
-}
-
-a:link{
-  text-decoration: none;
-}
-
-div.image{
-  background-image: url("one_ship.jpg");
-  // background-position: center center;
-  background-size: cover;
-  height: 100vh;
-}
-
-.field{
-  font-size: 18px;
-  font-family: Georgia, serif;
-}
-
-.sign-up{
-  margin: auto;
-  text-align: center;
-  border: 2px;
-  border-style: solid;
-  color: white;
-  width: 300px;
-}
-
-#p1{
-  font-family: Georgia, serif;
-  color: white;
-  font-size: 18px;
-  text-align: center;
-  margin-top: -25px;
-  margin-left: 100px;
-}
-
-h3{
-  padding-top: -10px;
-  font-family: 'Crimson Text', serif;
-}
-
-h2{
-  font-family: 'Montserrat', sans-serif;
-}
-h1{
-  padding-top: 10px;
-  text-align: center;
-  font-size: 45px;
-  font-family: Georgia, serif;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-}
-
-p{
-  font-family: 'Crimson Text', serif;
-  font-size: 22px;
-}
-
-label{
-  font-family: 'Crimson Text', serif;
-  font-size: 22px;
-}
-
-#boat-job-inner {
-  // display: none;
-}
-
-.boat-job-div1 {
-  width: 36%;
-  padding: 24px;
-}
-
-.boat-job-div2 {
-  width: 36%;
-  padding: 24px;
-  border-style: none;
-  box-shadow: 10px 10px 10px 10px #888888;
-  margin-left: 3%;
-  margin-right: 3%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.boats-new{
-  padding-left: 20px;
-  padding-bottom: 10px;
-  border: solid;
-  width: 400px;
-  color: white;
-}
-
-.boats-new{
-  margin: auto;
-}
-
-h3{
- color:white;
- padding-left: 5px;
-}
-
-img.boat-image {
-  width: 300px;
-  height: auto;
-}
-
-h2{
-  padding-left: 50px;
-}
-
-.dash-board1{
-  padding-left: 10px;
-}
-
-.job-title{
-  margin: auto;
-  border: solid;
-  color: white;
-  width: 400px;
-  padding-left: 5px;
-}
+// // font-family: 'Montserrat', sans-serif;
+// // font-family: 'Crimson Text', serif;
+//
+// .column {
+//   float: left;
+//   // width: 50%;
+// }
+//
+// body{
+//   margin: 0;
+//   background-color: #dadbe0;
+// }
+//
+// ul{
+//   list-style: none;
+//   display: flex;
+//   justify-content: space-evenly;
+//   font-size: 20px;
+//   font-family: 'Montserrat', sans-serif;
+//   padding-top: 10px;
+// }
+//
+// li{
+//   padding-left: 5px;
+//   padding-right: 5px;
+// }
+//
+// li a:hover {
+//     background-color: #555;
+//     color: white;
+// }
+//
+// a:link{
+//   text-decoration: none;
+// }
+//
+// div.image{
+//   background-image: url("one_ship.jpg");
+//   // background-position: center center;
+//   background-size: cover;
+//   height: 100vh;
+// }
+//
+// .field{
+//   font-size: 18px;
+//   font-family: Georgia, serif;
+// }
+//
+// .sign-up{
+//   margin: auto;
+//   text-align: center;
+//   border: 2px;
+//   border-style: solid;
+//   color: white;
+//   width: 300px;
+// }
+//
+// #p1{
+//   font-family: Georgia, serif;
+//   color: white;
+//   font-size: 18px;
+//   text-align: center;
+//   margin-top: -25px;
+//   margin-left: 100px;
+// }
+//
+// h3{
+//   padding-top: -10px;
+//   font-family: 'Crimson Text', serif;
+// }
+//
+// h2{
+//   font-family: 'Montserrat', sans-serif;
+// }
+// h1{
+//   padding-top: 10px;
+//   text-align: center;
+//   font-size: 45px;
+//   font-family: Georgia, serif;
+//   color: white;
+//   font-family: 'Montserrat', sans-serif;
+// }
+//
+// p{
+//   font-family: 'Crimson Text', serif;
+//   font-size: 22px;
+// }
+//
+// label{
+//   font-family: 'Crimson Text', serif;
+//   font-size: 22px;
+// }
+//
+// #boat-job-inner {
+//   // display: none;
+// }
+//
+// .boat-job-div1 {
+//   width: 36%;
+//   padding: 24px;
+// }
+//
+// .boat-job-div2 {
+//   width: 36%;
+//   padding: 24px;
+//   border-style: none;
+//   box-shadow: 10px 10px 10px 10px #888888;
+//   margin-left: 3%;
+//   margin-right: 3%;
+// }
+//
+// /* Clear floats after the columns */
+// .row:after {
+//   content: "";
+//   display: table;
+//   clear: both;
+// }
+//
+// .boats-new{
+//   padding-left: 20px;
+//   padding-bottom: 10px;
+//   border: solid;
+//   width: 400px;
+//   color: white;
+// }
+//
+// .boats-new{
+//   margin: auto;
+// }
+//
+// h3{
+//  color:white;
+//  padding-left: 5px;
+// }
+//
+// img.boat-image {
+//   width: 300px;
+//   height: auto;
+// }
+//
+// h2{
+//   padding-left: 50px;
+// }
+//
+// .dash-board1{
+//   padding-left: 10px;
+// }
+//
+// .job-title{
+//   margin: auto;
+//   border: solid;
+//   color: white;
+//   width: 400px;
+//   padding-left: 5px;
+// }
