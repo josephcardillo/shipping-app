@@ -1,6 +1,5 @@
-<p class="shipper-account-pos shipper-account-styling">Shipper Account: <%= link_to @shipper.email, edit_shipper_registration_path %></p>
 
-<div class = "dash-board1 form-font">
+<div class="dash-board1 form-font">
   <%= form_with model: BoatJob.new, url: join_create_path do |f| %>
   <div class="container">
     <div class="row">
@@ -34,6 +33,7 @@
           <th scope="col">Containers Needed</th>
         </tr>
       </thead>
+
       <% @b.each do |boat_job| %>
       <% if boat_job.boat.shipper_id == current_shipper.id %>
       <tbody class="table-row">
