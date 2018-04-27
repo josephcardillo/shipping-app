@@ -1,9 +1,11 @@
-<% if BoatJob.save %>
-  $("#boat-id-span").html("<%= @boat_job.boat_id %>")
-  $("#boat-name-span").html("<%= @boat_job.boat.name %>")
 
-  $("#job-id-span").html("<%= @boat_job.job_id %>")
-  $("#job-title-span").html("<%= @boat_job.job.title %>")
+  $("#boat-id-span").html("<%= @boat_job.boat_id %>");
+  $("#boat-name-span").html("<%= @boat_job.boat.name %>");
 
-  $(render partial: "boats_jobs_form").append(".boat-job-div2")
-<% end %>
+  $("#job-id-span").html("<%= @boat_job.job_id %>");
+  $("#job-title-span").html("<%= @boat_job.job.title %>");
+
+
+
+
+$("<%= j render 'form' %>").appendTo(".boat-job-div2");
