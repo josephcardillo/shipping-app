@@ -1,18 +1,27 @@
 <h1>ShipEx</h1>
 <p id="p1">-We ship shit for less</p>
 
-<%= form_for @job do |f| %>
+<div class = "job-title">
+  <p>Edit your job:</p>
+  <%= form_for @job do |f| %>
     <%= f.label :title %>
     <%= f.text_field :title %>
+    <br>
     <%= f.label :description %>
     <%= f.text_field :description %>
+    <br>
     <%= f.label :origin %>
     <%= f.text_field :origin %>
+    <br>
     <%= f.label :destination %>
     <%= f.text_field :destination %>
+    <br>
     <%= f.label :cost %>
     <%= f.text_field :cost %>
+    <br>
     <%= f.label :containers_needed %>
     <%= f.text_field :containers_needed %>
+    <br>
     <%= f.submit %>
     <% end %>
+</div>
