@@ -18,10 +18,15 @@ class ShippersController < ApplicationController
   end
 
   def joincreate
-    @boat_job = BoatJob.create(boat_jobs_params)
-    # redirect_to shipper_dash_path
-     respond_to do |format|
-       format.js
+    @boat_job = BoatJob.new(boat_jobs_params)
+        if @boat_job.job.containers_needed > @boat_job.boat.container_volume
+          flash[:notice] = "You tried to assign a job to a boat where the boat's container volume is less than the amount of containers needed to get that shit done. Please choose a boat with a greater container capacity!"
+        else
+        # redirect_to shipper_dash_path
+          @boat_job.save
+            respond_to do |format|
+              format.js
+       end
      end
    end
 
@@ -36,6 +41,7 @@ class ShippersController < ApplicationController
     @job = Job.new
     @shipper = Shipper.find(params[:id])
     @boat_job = BoatJob.last
+    @b = BoatJob.all
   end
 
   def destroy

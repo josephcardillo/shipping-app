@@ -2,7 +2,7 @@
 <p id="p1">-We ship shit for less</p>
 
 <div class ="job-title">
-  <p>Title: <%= @job.title %></p>
+  <p>Title: <%= link_to @job.title, edit_job_path(@job) %></p>
   <p>Description: <%= @job.description %></p>
   <p>Origin: <%= @job.origin %></p>
   <p>Destination: <%= @job.destination %></p>
