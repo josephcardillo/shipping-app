@@ -1,11 +1,14 @@
 <h1>ShipEx</h1>
 <p id="p1">-We ship shit for less</p>
 
+<div class = "job-title">
+  <p>Your boat:</p>
+  <p>Title: <%= @boat.name %></p>
+  <p>Location: <%= @boat.location %></p>
+  <% if @boat.avatar.url %>
+  <p>Boat Image: <%= image_tag @boat.avatar.url, class: "boat-image" %></p>
+  <% end %>
 
-<p>Title: <%= @boat.name %></p>
-<p>Location: <%= @boat.location %></p>
-<% if @boat.avatar.url %>
-<p>Boat Image: <%= image_tag @boat.avatar.url, class: "boat-image" %></p>
-<% end %>
+  <%= link_to "Delete Boat", boat_path(@boat), method: :delete %>
 
-<%= link_to "Delete Boat", boat_path(@boat), method: :delete %>
+</div>
