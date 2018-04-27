@@ -1,17 +1,32 @@
-<h1>ShipEx</h1>
-<p id="p1">-We ship shit for less</p>
+  <h2> All Jobs</h2>
+    <div class="">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Job Title</th>
+            <th scope="col">Job Description</th>
+            <th scope="col">Origin</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Cost</th>
+            <th scope="col">Containers Needed</th>
+          </tr>
+        </thead>
 
-<h2> All Jobs</h2>
-<div class="column boat-job-div2">
-  <% @jobs.each do |job| %>
-  <% if job.shipper_id == current_shipper.id %>
-    <p>Job title: <%= link_to job.title, edit_job_path(job) %></p>
-    <p>Job description: <%= job.description %></p>
-    <p>Origin: <%= job.origin %></p>
-    <p>Destination: <%= job.destination %></p>
-    <p>Cost: $<%= job.cost %></p>
-    <p>Containers Needed: <%= job.containers_needed %></p>
-    <hr>
-    <% end %>
-  <% end %>
+      <% @jobs.each do |job| %>
+      <% if job.shipper_id == current_shipper.id %>
+      <tbody class="table-row">
+        <tr>
+          <th scope="row"><%= job.id %></th>
+          <td><%= link_to job.title, edit_job_path(job) %></td>
+          <td><%= job.description %></td>
+          <td><%= job.origin %></td>
+          <td><%= job.destination %></td>
+          <td>$<%= job.cost %></td>
+          <td><%= job.containers_needed %></td>
+        </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
 </div>

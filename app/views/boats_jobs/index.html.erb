@@ -1,14 +1,30 @@
-<h1>ShipEx</h1>
-<p id="p1">-We ship shit for less</p>
-
 <h1>Boat-Job Assignments</h1>
-<div class="boat-job-div2">
-  <% @boat_job.each do |boat_job| %>
-  <% if boat_job.boat.shipper_id == current_shipper.id %>
-    <p><%= boat_job.boat.name %> is assigned to <%= boat_job.job.title%></p>
-    <p>Boat Container Volume: <%= boat_job.boat.container_volume %>
-    <p>Job Containers Needed: <%= boat_job.job.containers_needed%></p></p>
-    <hr>
+<div class="">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Job Title</th>
+        <th scope="col">Job Description</th>
+        <th scope="col">Boat Name</th>
+        <th scope="col">Cost</th>
+        <th scope="col">Containers Needed</th>
+      </tr>
+    </thead>
+
+    <% @boat_job.each do |boat_job| %>
+    <% if boat_job.boat.shipper_id == current_shipper.id %>
+      <tbody class="table-row">
+        <tr>
+          <th scope="row"><%= boat_job.id %></th>
+          <td><%= boat_job.job.title %></td>
+          <td><%= boat_job.job.description%></td>
+          <td><%= boat_job.boat.name %></td>
+          <td><%= boat_job.job.cost%></td>
+          <td><%= boat_job.job.containers_needed%></td>
+        </tr>
+      <% end %>
     <% end %>
-  <% end %>
+    </tbody>
+  </table>
 </div>

@@ -1,92 +1,52 @@
-<h1>ShipEx</h1>
-<p id="p1">-We ship shit for less</p>
-<h3>Welcome Back <%= @shipper.email %>!</h3>
 
-<h1>Connect your jobs and boats!</h1>
-<h2>Choose a boat and job from the below dropdown, then click "Create Boat Job" to assign.</h2>
-<div class = "dash-board1">
+<div class="dash-board1 form-font">
   <%= form_with model: BoatJob.new, url: join_create_path do |f| %>
-    <%= f.label :boat_name %>
-    <%= select("boat_job", "boat_id", boats_select_array ) %>
-    <br>
-    <%= f.label :job_name %>
-    <%= select("boat_job", "job_id", jobs_select_array ) %>
-    <br>
-  <%= f.submit class: "boat-job-button", data: {disable_with: "Submitting..."} %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <%= f.label :boat_name %>
+        <%= select("boat_job", "boat_id", boats_select_array ) %>
+      </div>
+      <div class="col-sm">
+        <%= f.label :job_name %>
+        <%= select("boat_job", "job_id", jobs_select_array ) %>
+      </div>
+      <div class="col-sm">
+        <%= f.submit "Assign Job", class: "boat-job-button", data: {disable_with: "Submitting..."} %>
+      </div>
   <% end %>
 </div>
 
-<div class="">
-  <h1>Last Assigned Job:</h1>
-  <div class="row">
-    <div class="column boat-job-div1">
-        <% if BoatJob.exists? %>
-            <h2>Boat Number:
-              <span id='boat-id-span'><%= @boat_job.boat_id %></span>
-            </h2>
-            <h2>Boat Name:
-              <span id='boat-name-span'><%= @boat_job.boat.name %></span>
-            </h2>
-    </div>
-    <div class="column boat-job-div1">
-            <h2>Job Number:
-              <span id='job-id-span'><%= @boat_job.job_id %></span>
-            </h2>
-            <h2>Job Title:
-              <span id='job-title-span'><%= @boat_job.job.title %></span>
-            </h2>
-    </div>
-          <% else %>
-            <h2>
-              <span id='boat-id-span'>-</span>
-            </h2>
-            <h2>
-              <span id='job-id-span'>-</span>
-            </h2>
-        <% end %>
-  </div>
-</div>
 <hr>
 
-<h1>Boat-Job Assignments</h1>
+<h1>Job Assignments</h1>
 <div class="boat-job-div2">
-  <% @b.each do |boat_job| %>
-  <% if boat_job.boat.shipper_id == current_shipper.id %>
-    <p><%= link_to boat_job.boat.name, boat_jobs_path %> is assigned to <%= boat_job.job.title%></p>
-    <p>Boat Container Volume: <%= boat_job.boat.container_volume %></p>
-    <p>Job Containers Needed: <%= boat_job.job.containers_needed%></p>
-    <hr>
-    <% end %>
-  <% end %>
-</div>
 
-<hr>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Boat Name</th>
+          <th scope="col">Capacity</th>
+          <th scope="col">Job Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Containers Needed</th>
+        </tr>
+      </thead>
 
-<div class="">
-  <div class="row">
-    <div class="column boat-job-div2">
-      <% @boats.each do |boat| %>
-      <% if boat.shipper_id == current_shipper.id %>
-        <p>Boat name: <%= link_to boat.name, boat_path(boat) %></p>
-        <p>Container volume: <%= boat.container_volume %></p>
-        <p>Location: <%= boat.location %></p>
-      <hr>
-      <% end %>
-    <% end %>
-    </div>
-
-    <div class="column boat-job-div2">
-      <% @jobs.each do |job| %>
-      <% if job.shipper_id == current_shipper.id %>
-          <p>Job title: <%= link_to job.title, job_path(job) %></p>
-          <p>Job description: <%= job.description %></p>
-          <p>Origin: <%= job.origin %></p>
-          <p>Destination: <%= job.destination %></p>
-          <p>Cost: $<%= job.cost %></p>
-          <p>Containers Needed: <%= job.containers_needed %></p>
-        <hr>
+      <% @b.each do |boat_job| %>
+      <% if boat_job.boat.shipper_id == current_shipper.id %>
+      <tbody class="table-row">
+        <tr>
+          <th scope="row"><%= boat_job.id %></th>
+          <td><%= link_to boat_job.boat.name, boat_jobs_path %></td>
+          <td><%= boat_job.boat.container_volume %></td>
+          <td><%= boat_job.job.title%></td>
+          <td><%= boat_job.job.description%></td>
+          <td><%= boat_job.job.containers_needed%></td>
+        </tr>
         <% end %>
       <% end %>
-    </div>
-  </div>
+      </tbody>
+    </table>
 </div>

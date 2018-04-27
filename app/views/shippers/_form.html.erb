@@ -1,5 +1,8 @@
-
-<p><%= @boat_job.boat.name %> is assigned to <%= @boat_job.job.title%></p>
-<p>Boat Container Volume: <%= @boat_job.boat.container_volume %></p>
-<p>Job Containers Needed: <%= @boat_job.job.containers_needed%></p>
-<hr>
+  <tr>
+    <th scope="row"><%= @boat_job.id %></th>
+    <td><%= link_to @boat_job.boat.name, boat_jobs_path %></td>
+    <td><%= @boat_job.boat.container_volume %></td>
+    <td><%= @boat_job.job.title%></td>
+    <td><%= @boat_job.job.description%></td>
+    <td><%= @boat_job.job.containers_needed%></td>
+  </tr>

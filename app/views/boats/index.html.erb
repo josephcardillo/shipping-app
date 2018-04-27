@@ -1,12 +1,26 @@
 <h2>Boat List</h2>
+  <div class="">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Boat Name</th>
+          <th scope="col">Container Volume</th>
+          <th scope="col">Location</th>
+        </tr>
+      </thead>
 
-<div class="column boat-job-div2">
-  <% @boats.each do |boat| %>
-  <% if boat.shipper_id == current_shipper.id %>
-    <p>Boat name: <%= link_to boat.name, edit_boat_path(boat) %></p>
-    <p>Container volume: <%= boat.container_volume %></p>
-    <p>Location: <%= boat.location %></p>
-    <hr>
-    <% end %>
-  <% end %>
-</div>
+        <% @boats.each do |boat| %>
+        <% if boat.shipper_id == current_shipper.id %>
+        <tbody class="table-row">
+          <tr>
+            <th scope="row"><%= boat.id %></th>
+            <td><%= link_to boat.name, edit_boat_path(boat) %></td>
+            <td><%= boat.container_volume %></td>
+            <td><%= boat.location %></td>
+          </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
