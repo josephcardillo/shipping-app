@@ -1,32 +1,38 @@
-<%= form_for @job do |f| %>
+<%= form_for(@job, :class => 'form-group') do |f| %>
 
-<div class = "boats-new">
+<div class="new-form-container1">
+  <div class="new-form-container2">
   <h2>Create Job</h2>
-  <div>
-    <%= f.label :title, "Title: " %>
-    <%= f.text_field :title %>
-  </div>
-  <div>
-    <%= f.label :description, "Description: " %>
-    <%= f.text_field :description %>
-  </div>
-  <div>
-    <%= f.label :origin, "Origin: " %>
-    <%= f.select :origin, boats_location%>
-  </div>
-  <div>
-    <%= f.label :destination, "Destination: " %>
-    <%= f.select :destination, boats_location%>
-</div>
-  <div>
-    <%= f.label :cost, "Cost: " %>
-    <%= f.text_field :cost %>
-  </div>
-  <div>
-    <%= f.label :containers_needed, "Containers Needed: " %>
-    <%= f.text_field :containers_needed %>
-  </div>
-    <%= f.submit %>
-  <% end %>
 
+      <div>
+        <%= f.label :title, "Title: " %>
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
+      <div>
+        <%= f.label :description, "Description: " %>
+        <%= f.text_field :description, class: 'form-control' %>
+      </div>
+      <div>
+        <%= f.label :cost, "Cost: " %>
+        <%= f.text_field :cost, class: 'form-control' %>
+      </div>
+      <div>
+        <%= f.label :containers_needed, "Containers Needed: " %>
+        <%= f.text_field :containers_needed, class: 'form-control' %>
+      </div>
+      <div class="container dropdown-margin-bottom">
+        <div class="row justify-content-around">
+          <div class="col-4">
+        <%= f.label :origin, "Origin: " %>
+        <%= f.select :origin, boats_location%>
+          </div>
+          <div class="col-4">
+        <%= f.label :destination, "Destination: " %>
+        <%= f.select :destination, boats_location%>
+          </div>
+        </div>
+      </div>
+      <%= f.submit class: "new-button-style" %>
+  <% end %>
+  </div>
 </div>

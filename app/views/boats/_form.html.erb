@@ -1,19 +1,20 @@
-<div class = "boats-new">
+<div class="new-form-container1">
+  <div class="new-form-container2">
     <h2>Create Boat</h2>
     <%= form_for @boat do |f| %>
-      <%= f.label :name %>
-      <%= f.text_field :name %><br>
+      <%= f.label :name, "Name: " %>
+      <%= f.text_field :name, class: 'form-control' %><br>
       <%= f.label :location %>
       <%= f.select :location, boats_location%>
       <br>
       <%= f.label :container_volume %>
-      <%= f.text_field :container_volume %>
+      <%= f.text_field :container_volume, class: 'form-control' %>
       <div class="field">
         <%= f.label :avatar %><br />
         <%= f.file_field :avatar %>
       </div>
       <br>
-      <%= f.submit %>
+      <%= f.submit class: "new-button-style" %>
     <% end %>
   </div>
 

@@ -16,8 +16,7 @@
   </head>
 
   <body>
-
-    <header class="sticky-top">
+    <header class="sticky-top header-shadow">
       <% if current_shipper %>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <%=link_to("Dashboard", shipper_dash_path(current_shipper), class: "navbar-brand") %>
@@ -45,7 +44,7 @@
     <div class="wrapper1">
       <div class="wrapper2">
         <div class="">
-          <h1>ShipEx</h1>
+          <h1 class="shipex-pos">ShipEx</h1>
             <h2>We ship for less</h2>
         </div>
           <p class="notice"><%= notice %></p>

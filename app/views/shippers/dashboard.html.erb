@@ -2,13 +2,19 @@
 
 <div class = "dash-board1 form-font">
   <%= form_with model: BoatJob.new, url: join_create_path do |f| %>
-    <%= f.label :boat_name %>
-    <%= select("boat_job", "boat_id", boats_select_array ) %>
-    <br>
-    <%= f.label :job_name %>
-    <%= select("boat_job", "job_id", jobs_select_array ) %>
-    <br>
-  <%= f.submit "Assign Job", class: "boat-job-button", data: {disable_with: "Submitting..."} %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <%= f.label :boat_name %>
+        <%= select("boat_job", "boat_id", boats_select_array ) %>
+      </div>
+      <div class="col-sm">
+        <%= f.label :job_name %>
+        <%= select("boat_job", "job_id", jobs_select_array ) %>
+      </div>
+      <div class="col-sm">
+        <%= f.submit "Assign Job", class: "boat-job-button", data: {disable_with: "Submitting..."} %>
+      </div>
   <% end %>
 </div>
 
