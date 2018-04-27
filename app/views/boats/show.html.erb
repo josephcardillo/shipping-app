@@ -3,7 +3,7 @@
 
 <div class = "job-title">
   <p>Your boat:</p>
-  <p>Title: <%= @boat.name %></p>
+  <p>Title: <%= link_to @boat.name, edit_boat_path(@boat) %></p>
   <p>Location: <%= @boat.location %></p>
   <% if @boat.avatar.url %>
   <p>Boat Image: <%= image_tag @boat.avatar.url, class: "boat-image" %></p>
