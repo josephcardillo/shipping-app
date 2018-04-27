@@ -21,7 +21,8 @@ class JobsController < ApplicationController
     if @job.save
     flash.notice = "Your job '#{@job.title}' has been created!"
   else
-    flash.notice = "Your job title has been taken! Please enter a new title."
+    flash.notice = @job.errors.full_messages
+    redirect_to new_job_path
   end
     p @job.errors.full_messages
   end

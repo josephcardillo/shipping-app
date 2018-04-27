@@ -48,12 +48,26 @@
 </div>
 <hr>
 
+<h1>Boat-Job Assignments</h1>
+<div class="boat-job-div2">
+  <% @b.each do |boat_job| %>
+  <% if boat_job.boat.shipper_id == current_shipper.id %>
+    <p><%= boat_job.boat.name %> is assigned to <%= boat_job.job.title%></p>
+    <p>Boat Container Volume: <%= boat_job.boat.container_volume %></p>
+    <p>Job Containers Needed: <%= boat_job.job.containers_needed%></p>
+    <hr>
+    <% end %>
+  <% end %>
+</div>
+
+<hr>
+
 <div class="">
   <div class="row">
     <div class="column boat-job-div2">
       <% @boats.each do |boat| %>
       <% if boat.shipper_id == current_shipper.id %>
-        <p>Boat name: <%= boat.name %></p>
+        <p>Boat name: <%= link_to boat.name, boat_path(boat) %></p>
         <p>Container volume: <%= boat.container_volume %></p>
         <p>Location: <%= boat.location %></p>
       <hr>
@@ -64,7 +78,7 @@
     <div class="column boat-job-div2">
       <% @jobs.each do |job| %>
       <% if job.shipper_id == current_shipper.id %>
-          <p>Job title: <%= job.title %></p>
+          <p>Job title: <%= link_to job.title, job_path(job) %></p>
           <p>Job description: <%= job.description %></p>
           <p>Origin: <%= job.origin %></p>
           <p>Destination: <%= job.destination %></p>

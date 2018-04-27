@@ -3,7 +3,7 @@
 <div class="column boat-job-div2">
   <% @boats.each do |boat| %>
   <% if boat.shipper_id == current_shipper.id %>
-    <p>Boat name: <%= boat.name %></p>
+    <p>Boat name: <%= link_to boat.name, edit_boat_path(boat) %></p>
     <p>Container volume: <%= boat.container_volume %></p>
     <p>Location: <%= boat.location %></p>
     <hr>

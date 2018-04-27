@@ -1,10 +1,11 @@
 <h1>ShipEx</h1>
 <p id="p1">-We ship shit for less</p>
-<p>Title: <%= @job.title %></p>
-<p>Description: <%= @job.description %></p>
-<p>Origin: <%= @job.origin %></p>
-<p>Destination: <%= @job.destination %></p>
-<p>Containers Needed: <%= @job.containers_needed %></p>
+
+  <p>Title: <%= link_to @job.title, edit_job_path(@job) %></p>
+  <p>Description: <%= @job.description %></p>
+  <p>Origin: <%= @job.origin %></p>
+  <p>Destination: <%= @job.destination %></p>
+  <p>Containers Needed: <%= @job.containers_needed %></p>
 
 <!-- <form method="delete" action="/jobs/<%=@job.id%>">
   <input value="delete" type="submit">
