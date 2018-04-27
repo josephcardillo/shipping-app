@@ -52,7 +52,7 @@
 <div class="boat-job-div2">
   <% @b.each do |boat_job| %>
   <% if boat_job.boat.shipper_id == current_shipper.id %>
-    <p><%= boat_job.boat.name %> is assigned to <%= boat_job.job.title%></p>
+    <p><%= link_to boat_job.boat.name, boat_jobs_path %> is assigned to <%= boat_job.job.title%></p>
     <p>Boat Container Volume: <%= boat_job.boat.container_volume %></p>
     <p>Job Containers Needed: <%= boat_job.job.containers_needed%></p>
     <hr>
