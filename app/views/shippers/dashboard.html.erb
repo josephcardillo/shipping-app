@@ -34,9 +34,9 @@
         </tr>
       </thead>
 
+      <tbody class="table-row">
       <% @b.each do |boat_job| %>
       <% if boat_job.boat.shipper_id == current_shipper.id %>
-      <tbody class="table-row">
         <tr>
           <th scope="row"><%= boat_job.id %></th>
           <td><%= link_to boat_job.boat.name, boat_jobs_path %></td>

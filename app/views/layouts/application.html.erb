@@ -42,7 +42,7 @@
     </header>
     <div class="shipper-account-div">
       <% if current_shipper %>
-        <p class="shipper-account-pos shipper-account-styling">Shipper Account: <%= link_to current_shipper.email, edit_shipper_registration_path %></p>
+      <p class="shipper-account-pos shipper-account-styling">Shipper Account: <%= link_to current_shipper.email, edit_shipper_registration_path %></p>
       <% else %>
       <p class="shipper-account-pos shipper-account-styling">Shipper Account: <%= link_to "Log In", new_shipper_session_path %></p>
       <% end %>

@@ -10,7 +10,11 @@ module ShippersHelper
     def args(x, y)
     method(__method__).parameters.map do |_, name|
       binding.local_variable_get(name)
+      end
     end
 
-  end
+    # def check_boat_job_exists
+    #   @boat_job.where boat_id == job_id
+    #   return true
+    # end
 end

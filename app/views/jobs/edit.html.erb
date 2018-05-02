@@ -8,10 +8,9 @@
     <%= f.text_field :description %>
     <br>
     <%= f.label :origin %>
-    <%= f.text_field :origin %>
-    <br>
+    <%= f.select :origin, boats_location %>
     <%= f.label :destination %>
-    <%= f.text_field :destination %>
+    <%= f.select :destination, boats_location %>
     <br>
     <%= f.label :cost %>
     <%= f.text_field :cost %>
