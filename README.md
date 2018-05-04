@@ -6,23 +6,24 @@ A Rails application for shippers to help them organize all of the ships in their
 
 * Sign up, login and logout
 * Create new boats that will associate with the user’s profile.
-* Boats must have the following attributes:
+
+### Boats have the following attributes:
   * Name
   * Amount of containers its able to ship
   * Location (stored as a string)
 
-### When creating new jobs, each job has the following attributes:
+### Jobs have the following attributes:
 * Description
 * Origin (stored as a string)
 * Destination (stored as a string)
 * Cost
 * Amount of containers needed for job
 
-## Validations:
+## VALIDATIONS
 
 ### Boats:
 * Must have a unique name
-* Locations must be pulled from a valid list of locations (use a hard-coded list)
+* Locations are pulled from a valid list of locations (using a hard-coded list)
 
 ### Jobs:
 * Must have a unique name
