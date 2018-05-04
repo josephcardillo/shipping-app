@@ -7,7 +7,7 @@ Rails.application.configure do
   config.cache_classes = false
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   require 'carrierwave/orm/activerecord'
-
+  config.serve_static_assets = true
   # Do not eager load code on boot.
   config.eager_load = false
 
