@@ -2,6 +2,8 @@
 
 ## ShipEx
 
+![](shipex.gif)
+
 A Rails application for shippers to help them organize all of the ships in their fleet, with a user login system using Devise. The application allows users to:
 
 * Sign up, login and logout
